@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './static/reset.css'
 import './index.css';
-import App from './App';
+import RouteMap from './router'
+import { hashHistory } from 'react-router'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(<RouteMap history={hashHistory}/>, document.getElementById('root'));
