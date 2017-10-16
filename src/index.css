@@ -1,6 +1,26 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 12px;
 }
+
+/*
+
+<svg className="iconfont" aria-hidden="true" style={{fontSize:'30px'}}>
+    <use xlinkHref="#icon-cloud"></use>
+</svg>
+*/
+.iconfont {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.color0 {color:#5FD9CD}
+.color1 {color:#EAF786}
+.color2 {color:#FFB5A1}
+.color3 {color:#B8FFB8}
+.color4 {color:#B8F4FF}
