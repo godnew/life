@@ -2,6 +2,7 @@
  * Created by godnew on 2017/10/16.
  */
 import React, { Component } from 'react';
+import {Link} from 'react-router'
 
 class Index extends Component {
   constructor(props){
@@ -34,11 +35,12 @@ class Index extends Component {
         },
         {
           icon:'#icon-cloud',
-          text:'天气'
+          text:'天气',
+          link:'/weather'
         },
         {
           icon:'#icon-dianying',
-          text:'电影'
+          text:'电影',
         },
       ]
     }
@@ -52,12 +54,14 @@ class Index extends Component {
             this.state.icon.map((item,index)=>{
               return (
                 <li key={index} style={styles.li}>
-                  <div>
-                    <svg className="iconfont" aria-hidden="true" style={{fontSize:'30px'}}>
-                      <use xlinkHref={item.icon}></use>
-                    </svg>
-                  </div>
-                  <span style={styles.text}>{item.text}</span>
+                  <Link to={item.link}>
+                    <div>
+                      <svg className="iconfont" aria-hidden="true" style={{fontSize:'30px'}}>
+                        <use xlinkHref={item.icon}></use>
+                      </svg>
+                    </div>
+                    <span style={styles.text}>{item.text}</span>
+                  </Link>
                 </li>
               )
             })
