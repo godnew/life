@@ -19,7 +19,8 @@ class Index extends Component {
         },
         {
           icon:'#icon-xinwenbaozhi',
-          text:'新闻'
+          text:'新闻',
+          link:'/news'
         },
         {
           icon:'#icon-chaxun-copy',

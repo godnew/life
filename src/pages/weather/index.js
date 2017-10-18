@@ -17,7 +17,7 @@ class Weather extends Component {
     return (
       <div style={styles.container}>
         <div>
-          <iframe scrolling="no" src="http://tianqiapi.com/api.php?style=tk&skin=pitaya" frameborder="0" width="260" height="195" allowtransparency="true"></iframe>
+          <iframe scrolling="no" src="http://tianqiapi.com/api.php?style=tk&skin=pitaya" frameBorder="0" width="260" height="195" allowTransparency="true"></iframe>
         </div>
         <div style={styles.message}>{this.state.message}</div>
         <p style={styles.name}>—{this.state.name}</p>

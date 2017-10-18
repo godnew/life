@@ -6,6 +6,7 @@ import { Router, Route ,hashHistory,IndexRedirect} from 'react-router'
 import App from './App'
 import Index from './pages/index'
 import Weather from './pages/weather/index'
+import News from './pages/news/index'
 export default function router(){
   return (
     <Router history={hashHistory}>
@@ -13,6 +14,7 @@ export default function router(){
         <IndexRedirect to="/index" />
         <Route path="index" component={Index}/>
         <Route path="weather" component={Weather}/>
+        <Route path="news" component={News}/>
       </Route>
     </Router>
   );
