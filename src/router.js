@@ -7,6 +7,7 @@ import App from './App'
 import Index from './pages/index'
 import Weather from './pages/weather/index'
 import News from './pages/news/index'
+import OutAdvise from './pages/outAdvise/index'
 export default function router(){
   return (
     <Router history={hashHistory}>
@@ -15,6 +16,7 @@ export default function router(){
         <Route path="index" component={Index}/>
         <Route path="weather" component={Weather}/>
         <Route path="news" component={News}/>
+        <Route path="outAdvise" component={OutAdvise}/>
       </Route>
     </Router>
   );

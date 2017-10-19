@@ -10,6 +10,11 @@ class Index extends Component {
     this.state={
       icon:[
         {
+          icon:'#icon-chuhangzhushou',
+          text:'出行指数',
+          link:'/outAdvise'
+        },
+        {
           icon:'#icon-gongjuxiang',
           text:'工具'
         },
