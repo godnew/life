@@ -16,7 +16,7 @@ class Index extends Component {
         },
         {
           icon:'#icon-gongjuxiang',
-          text:'工具'
+          text:'小工具'
         },
         {
           icon:'#icon-rewenshoulu',
@@ -47,6 +47,7 @@ class Index extends Component {
         {
           icon:'#icon-dianying',
           text:'电影',
+          link:'/movie'
         },
       ]
     }
