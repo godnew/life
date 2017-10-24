@@ -6,8 +6,8 @@ import React, { Component } from 'react';
 class Movie extends Component {
   render() {
     return (
-      <div style={{height:'100vh'}}>
-        <iframe src="https://m.douban.com/movie/" frameborder="0" width={'100%'} height={'100%'}></iframe>
+      <div style={{height:'100vh',width:'100%'}}>
+        <iframe src="https://m.douban.com/movie/" width={'100%'} height={'100%'}></iframe>
       </div>
     );
   }
