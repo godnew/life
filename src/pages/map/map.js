@@ -1,9 +1,10 @@
 /**
  * Created by godnew on 2017/10/24.
  */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Map} from 'react-amap'
 import Geolocation from '../../components/geo'
+import PostLocation from '../../fetch/postLocation'
 
 const pluginProps = {
   enableHighAccuracy: true,//是否使用高精度定位，默认:true
@@ -19,9 +20,9 @@ class Maps extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      result:'',
-      userName:'',
-      token:''
+      result: '',
+      userName: '',
+      token: ''
     }
   }
 
@@ -34,17 +35,38 @@ class Maps extends Component {
           </Map>
         </div>
         <div>
-          {this.state.result?(this.state.result.position.lat+'-'+this.state.result.position.lng):'无数据'}
+          <img src="http://images2015.cnblogs.com/news/66372/201511/66372-20151111165128978-139054411.jpg" alt=""/>
         </div>
       </div>
     );
   }
 
-  geoComplete(res){
+  geoComplete(res) {
     console.log(res)
+    var message = {};
+    message.latitude = res.position.lat
+    message.longitude = res.position.lng
+    message.location = res.formattedAddress
+    var Request=this.GetRequest()
+    // console.log(Request)
+    message.fromUsername=Request['from']
+    message.toUsername=Request['to']
+    console.log(message)
+    PostLocation(message)
     this.setState({
-      result:res
+      result: res
     })
+  }
+
+  GetRequest() {
+    var url = window.location.href; //获取url中"?"符后的字串
+    var str=url.split('map?')[1];
+    var theRequest = new Object();
+    var strs = str.split("&");
+    for(var i = 0; i < strs.length; i ++) {
+      theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+    }
+    return theRequest;
   }
 }
 

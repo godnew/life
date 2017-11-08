@@ -69,7 +69,7 @@ class Location extends Component {
       if(num>0){
         name=arr[i].substring(0,num);
         value=arr[i].substr(num+1);
-        buf[name]=value;
+        buf[name]=decodeURI(value);
       }
     }
     return buf;
